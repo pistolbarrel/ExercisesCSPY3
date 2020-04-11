@@ -26,10 +26,7 @@ def exercise_5():
     for i in xs:
         print(i, i ** 2)
 
-    print("sum total: ")
-    total = 0
-    for i in xs:
-        total = total + i
+    total = sum(xs)
 
     print(total)
 
@@ -54,20 +51,26 @@ def exercise_5():
     print(total)
 
 
+def sum(xs):
+    print("sum total: ")
+    total = 0
+    for i in xs:
+        total = total + i
+    return total
+
+
 def exercise_6():
     import turtle
     bob = turtle.Turtle()
     wn = turtle.Screen()
-    polygon(bob,8)
+    polygon(bob, 8)
     # wn.mainloop()
 
 
-def polygon(t,num_sides):
-
+def polygon(t, num_sides):
     for i in range(num_sides):
         t.fd(100)
         t.lt(360 / num_sides)
-
 
 
 def exercise_7():
@@ -75,7 +78,7 @@ def exercise_7():
     bob = turtle.Turtle()
     wn = turtle.Screen()
 
-    pirate_steps = [160,-43,270,-97,-43,200,-940,17,-86]
+    pirate_steps = [160, -43, 270, -97, -43, 200, -940, 17, -86]
     for i in (pirate_steps):
         bob.lt(i),
         bob.fd(100)
@@ -83,19 +86,65 @@ def exercise_7():
     wn.mainloop()
 
 
-'''
 def exercise_8():
+    import turtle
+    bob = turtle.Turtle()
+    wn = turtle.Screen()
+
+    pirate_steps = [160, -43, 270, -97, -43, 200, -940, 17, -86]
+    for i in (pirate_steps):
+        bob.lt(i),
+        bob.fd(100)
+
+    print("current heading:  ", bob.heading())
+    print("current heading using mod:  ", sum(pirate_steps) % 360)
+
+    wn.mainloop()
 
 
 def exercise_9():
+    print(360 / 18)
 
 
 def exercise_10():
+    import turtle
+
+    wn = turtle.Screen()
+    tess = turtle.Turtle()
+    tess.right(90)
+    tess.left(3600)
+    tess.right(-90)
+    tess.speed(10)
+    tess.left(3600)
+    tess.speed(0)
+    tess.left(3645)
+    tess.right(3645)
+    tess.left(3645)
+    tess.forward(-100)
+    wn.mainloop()
 
 
 def exercise_11():
+    import turtle
+    wn = turtle.Screen()
+    tess = turtle.Turtle()
+    tess.speed(100)
 
+    # tess.hideturtle()
 
+    def star(number_points):
+        points = number_points % 2
+        num_full_turns = points
+        angle = (2 * 360) / number_points
+        tess.lt(angle / 2)
+        for i in range(number_points):
+            tess.fd(100)
+            tess.rt(angle)
+
+    star(5)
+    wn.mainloop()
+
+    '''
 def exercise_12():
 
 
@@ -110,4 +159,5 @@ def exercise_15():
 
 '''
 
-exercise_7()
+
+exercise_11()

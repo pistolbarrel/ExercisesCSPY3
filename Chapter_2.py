@@ -1,26 +1,18 @@
 def exercise_1():
+    v=["All","work","and","no","play","makes","Jack","a","dull","boy"]
+
+    print(v)
+    sentence = " "
+    for i in range(10):
+        sentence = sentence + v[i]
+        print(v[i],end=" ")
+    print(".")
 
 
 
-def exercise_2():
+    print(sentence)
 
 
-def exercise_3():
-
-
-def exercise_4():
-
-
-def exercise_5():
-
-
-def exercise_6():
-
-
-def exercise_7():
-
-
-def exercise_8():
 
 
 exercise_1()
