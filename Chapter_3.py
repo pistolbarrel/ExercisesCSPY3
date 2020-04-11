@@ -125,10 +125,8 @@ def exercise_10():
 
 
 def exercise_11():
-    import turtle
-    wn = turtle.Screen()
-    tess = turtle.Turtle()
-    tess.speed(100)
+    wn,tess = setup_turtle()
+
 
     # tess.hideturtle()
 
@@ -158,6 +156,14 @@ def exercise_15():
 
 
 '''
+
+
+def setup_turtle():
+    import turtle
+    wn = turtle.Screen()
+    tess = turtle.Turtle()
+    tess.speed(10)
+    return wn, tess
 
 
 exercise_11()
