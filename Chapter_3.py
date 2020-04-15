@@ -18,6 +18,10 @@ def exercise_3():
 def exercise_5():
     xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
 
+    print("numbers no end newline:")
+    for i in xs:
+        print(i)
+
     print("numbers: ")
     for i in xs:
         print(i, end="\n")
@@ -123,7 +127,7 @@ def exercise_10():
     tess.forward(-100)
     wn.mainloop()
 
-
+'''
 def exercise_11():
     wn,tess = setup_turtle()
 
@@ -142,7 +146,7 @@ def exercise_11():
     star(5)
     wn.mainloop()
 
-    '''
+
 def exercise_12():
 
 
@@ -166,4 +170,4 @@ def setup_turtle():
     return wn, tess
 
 
-exercise_11()
+exercise_5()
